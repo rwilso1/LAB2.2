@@ -28,13 +28,13 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   int timesToBlink = 5;
   
-  for(int i = 1; i < timesToBlink; i ++){
+  while(timesToBlink > 0 ){
       digitalWrite(LED_BUILTIN, HIGH);  // turn the LED on (HIGH is the voltage level)
   delay(1000);                      // wait for a second
   digitalWrite(LED_BUILTIN, LOW);   // turn the LED off by making the voltage LOW
   delay(1000);                      // wait for a second
   }
-  
+  digitalWrite(LED_BUILTIN, HIGH);
 }
 
 // the loop function runs over and over again forever
